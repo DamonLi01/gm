@@ -1,0 +1,89 @@
+.auth-box{
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10001;
+}
+.top-background{
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  height: 310rpx;
+
+  background-size: cover;
+}
+.top-avatar{
+  width: 184rpx;
+  height: 184rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -92rpx;
+  left: 0;
+  right: 0;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  box-shadow: 0 0 25px #E6CEAA;
+}
+.mid-text{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top:482rpx;
+  left: 0;
+  right: 0;
+  padding: 0 124rpx;
+}
+.mid-text .mid-text-title{
+  color:#CAAA74;
+  font-size: 16px;
+  margin-bottom: 26rpx;
+}
+.mid-text .mid-text-content{
+  color: #B8B3AC;
+  font-size: 14px;
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.content-icon{
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #B8B3AC;
+  display: inline-block;
+  margin-right:10px; 
+}
+.bottom-button{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top:722rpx;
+  left: 0;
+  right: 0;
+  padding:0 46rpx;
+}
+.bottom-button button{
+  width:100% !important;
+  height: 78rpx !important;
+  border-radius:25px;
+  border: none;
+  line-height: 78rpx; 
+  color: #fff;
+  background: -webkit-linear-gradient(right, #CAAA74 , #E6CEAA); /* Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,  #CAAA74 , #E6CEAA); /* Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right,  #CAAA74 , #E6CEAA); /* Firefox 3.6 to 15 */
+  background: linear-gradient(to right,  #CAAA74 , #E6CEAA); /* 标准语法 */
+  box-shadow: 0 1px 5px #E6CEAA;
+}
+.bottom-button button::after{
+  border:none;
+}
+.bottom-button button::before{
+  border:none;
+}

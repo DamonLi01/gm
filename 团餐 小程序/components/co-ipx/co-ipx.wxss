@@ -1,0 +1,8 @@
+/* components/co-ipx.wxss */
+
+.height{
+  height: 50px;
+}
+.height.Ipx{
+  height: 84px;
+}

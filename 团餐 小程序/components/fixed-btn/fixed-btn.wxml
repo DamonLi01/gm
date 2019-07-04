@@ -1,4 +1,0 @@
-<view class='fixed-btn  {{isIpx?"isIpx":""}}'>
-  <slot />
-</view>
-<view class='height  {{isIpx?"isIpx":""}}'></view>

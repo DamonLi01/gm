@@ -1,0 +1,16 @@
+<view class='page review-page'>
+  <view class='review-content'>
+    <image src='/static/images/review/status.png' mode='widthFix'></image>
+
+    <view class='title'>
+      审核中
+    </view>
+    <view class='subtitle'>
+      待公司负责人审核
+    </view>
+
+    <view class='refresh-btn'>
+      <button>刷新</button>
+    </view>
+  </view>
+</view>

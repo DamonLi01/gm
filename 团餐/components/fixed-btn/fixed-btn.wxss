@@ -1,0 +1,29 @@
+.fixed-btn {
+  padding: 20rpx;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.fixed-btn button {
+  background: linear-gradient(90deg, rgba(7, 215, 101, 1) 0%, rgba(52, 209, 118, 1) 100%);
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 90rpx;
+}
+
+.fixed-btn.isIpx {
+  padding-bottom: 34px;
+}
+
+.height {
+  height: 130rpx;
+}
+
+.height.isIpx {
+  height: 110rpx;
+  padding-bottom: 34px;
+}

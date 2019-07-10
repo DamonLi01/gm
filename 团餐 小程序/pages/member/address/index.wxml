@@ -1,0 +1,67 @@
+<view class="page address-index-page">
+
+
+  <view class='com-cell-group'>
+
+    <view class='com-cell pad2520'>
+
+      <view class='com-cell-head'>
+        <image src='/static/images/member/default.png'></image>
+        <!-- <image src='/static/images/member/not-defalut.png'></image> -->
+      </view>
+      <view class='com-cell-body'>
+        <view class='userinfo'>
+          <view class='item'>熊娟 13445677888熊娟 13445677888熊娟 13445677888</view>
+
+          <view class='item'>
+            <view class='default'>默认</view>
+          </view>
+
+        </view>
+        <view class='address com-ellipsis-2 '>
+          【百信传媒有限公司】中国浙江省宁波市江北区市民路大道街198号腾辉大厦4楼39号
+        </view>
+
+      </view>
+      <view class='com-cell-foot' data-url='/pages/member/address/create/index' bindtap='jump'>
+        <image src='/static/images/member/eidt.png'></image>
+      </view>
+    </view>
+    <view class='com-cell pad2520'>
+
+      <view class='com-cell-head'>
+        <!-- <image src='/static/images/member/default.png'></image> -->
+        <image src='/static/images/member/not-defalut.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        <view class='userinfo'>
+          <view class='item'>熊娟 13445677888熊娟 13445677888熊娟 13445677888</view>
+
+          <view class='item'>
+            <!-- <view class='default'>默认</view> -->
+          </view>
+
+        </view>
+        <view class='address com-ellipsis-2 '>
+          【百信传媒有限公司】中国浙江省宁波市江北区市民路大道街198号腾辉大厦4楼39号百信传媒有限公司】中国浙江省宁波市江北区市民路大道街198号腾辉大厦4楼39号
+        </view>
+
+      </view>
+      <view class='com-cell-foot' data-url='/pages/member/address/create/index' bindtap='jump'>
+        <image src='/static/images/member/eidt.png'></image>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+</view>
+
+<fixed-btn>
+
+  <button bindtap='submit'>确定</button>
+
+</fixed-btn>

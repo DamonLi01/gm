@@ -120,7 +120,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(this.data.standard)
+    // console.log(this.data.standard)
   },
 
   /**
@@ -134,7 +134,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    this.setHeight();
+    // this.setHeight();
 
   },
 
@@ -178,7 +178,7 @@ Page({
     })
   },
   imgHeight(event) {
-    if (this.data.swiperheight == 0 || this.data.swiperheight > event.detail.height) {
+    if (this.data.swiperheight == 0 || this.data.swiperheight < event.detail.height) {
       var swiperheight = event.detail.height;
       this.setData({
         swiperheight

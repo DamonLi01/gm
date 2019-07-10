@@ -1,0 +1,127 @@
+<view class='page promotion-customer-page'>
+  <van-tabs active="{{ active.parent.index }}" data-name="parent" color="#999999" custom-class="custom-tabs" type="card" bind:change="activeChange">
+    <van-tab title="团餐客户(109)">
+
+      <view class='customer-list'>
+
+        <view class='com-cell-group'>
+
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+
+
+
+        </view>
+
+
+
+      </view>
+
+
+    </van-tab>
+    <van-tab title="下午茶客户(23)">
+
+      <view class='customer-list'>
+
+        <view class='com-cell-group'>
+
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的22夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+          <view class='com-cell'>
+            <view class='com-cell-head'>
+
+              <image src='/static/images/order/order.png'></image>
+
+            </view>
+            <view class='com-cell-body '>
+
+              <view class='com-ellipsis'>蝉鸣的夏季</view>
+            </view>
+            <view class='com-cell-foot'>
+              2019.01.21注册
+            </view>
+          </view>
+
+
+
+        </view>
+
+
+
+      </view>
+
+    </van-tab>
+
+  </van-tabs>
+
+
+
+</view>
+
+

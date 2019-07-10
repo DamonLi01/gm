@@ -1,0 +1,91 @@
+<view class='page promotion-page'>
+
+  <view class='com-cell-group user-info-group'>
+
+    <view class='com-cell'>
+
+      <view class='com-cell-head'>
+        <image src='http://img2.y01.cn/images/266/2019/07/rqQCr0LeBh20cofjr0lJbJozJO0plQ.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        <view class='com-ellipsis'>李洋李洋李洋李洋李洋李洋李洋李洋李洋李洋李洋李洋李洋</view>
+      </view>
+      <view class='com-cell-foot'>
+        <view class="withdraw-btn" data-url='/pages/promotion/withdraw/index' bindtap="jump">去提现</view>
+      </view>
+    </view>
+
+
+    <view class='com-cell commission-cell'>
+
+      <view class='item'>
+        <view class='number'>1209.71</view>
+        <view class='text'>我的佣金</view>
+      </view>
+      <view class='item'>
+        <view class='number'>1209.71</view>
+        <view class='text'>可提现佣金</view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class='com-cell-group list-group'>
+    <view class='com-cell pad2520' data-url='/pages/promotion/customer/index' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/promotion/customer.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        我的客户
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+    <view class='com-cell pad2520' data-url='/pages/promotion/commission/index' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/promotion/commission.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        佣金明细
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+    <view class='com-cell pad2520' data-url='/pages/promotion/withdraw/list/index' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/promotion/withdraw.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        提现明细
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+    <view class='com-cell pad2520' data-url='' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/promotion/qr.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        我的推广码
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>

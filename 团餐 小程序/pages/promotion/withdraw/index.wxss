@@ -1,0 +1,78 @@
+/* pages/company/index.wxss */
+
+.van-cell {
+  padding: 33rpx 28rpx !important;
+}
+
+.van-cell:after {
+  left: 0 !important;
+}
+
+.van-cell .van-cell__title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #0b0d2c;
+}
+
+.van-cell .van-field__input {
+  color: #0b0d2c;
+}
+
+.van-hairline--bottom:after, .van-hairline--left:after,
+.van-hairline--right:after, .van-hairline--surround:after,
+.van-hairline--top-bottom:after, .van-hairline--top:after, .van-hairline:after {
+  display: none;
+}
+
+/* .van-cell .van-field__input{
+
+} */
+
+.bank-select {
+  padding-right: 24rpx !important;
+}
+
+.bank-select::after {
+  content: " ";
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 1px 1px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -6rpx;
+  right: 4rpx;
+}
+
+.tips {
+  background-color: #fff;
+  padding: 20rpx;
+  font-size: 26rpx;
+  color: #c7c7ce;
+}
+
+.tips text {
+  color: #fb8836;
+}
+
+.clear-fixed.fixed-btn {
+  position: static !important;
+}
+
+.clear-fixed.height {
+  display: none;
+}
+
+.submit-btn {
+  margin-top: 45rpx;
+}
+
+.submit-btn[disabled]:not([type]) {
+  opacity: 0.6;
+  color: #fff;
+}

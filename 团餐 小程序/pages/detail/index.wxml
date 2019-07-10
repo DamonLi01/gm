@@ -1,9 +1,13 @@
 <view class='page high-tea-page-detail'>
-  <view class='banner'>
-    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{swiperheight}}px'>
-      <block wx:for="{{imgUrls}}" wx:key="key">
+
+  <view class='banner' wx:if="{{packageData.adv}}">
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:237rpx'>
+      <block wx:for="{{packageData.adv}}" wx:key="key">
         <swiper-item>
-          <image src="{{item}}" bindload="imgHeight" class="slide-image" />
+          <!-- <image src="{{item}}" bindload="imgHeight" class="slide-image" /> -->
+
+          <image src="{{item.imgUrl}}" data-jump="{{item.link}}" bindtap='jump' class="slide-image" />
+
         </swiper-item>
       </block>
     </swiper>
@@ -13,11 +17,11 @@
     <view class='com-cell'>
       <view class='com-cell-head'>
         <view class='title'>
-          500元标准套餐
+          {{packageData.packageName}}
         </view>
       </view>
       <view class='com-cell-body '>
-        <image bindtap='call' data-tel="1321321" src='/static/images/detail/call.png'></image>
+        <image bindtap='call' data-tel="{{packageData.tel}}" src='/static/images/detail/call.png'></image>
         <image bindtap='qrshow' src='/static/images/detail/qr.png'></image>
 
       </view>
@@ -30,7 +34,7 @@
 
       <view class='com-cell-body '>
         <view class='desc'>
-          套餐简介：套餐必须选够数量才能下单，精选研磨咖啡，浓香丝滑奶茶，美味奥尔良烤翅，甜点有马卡龙、蛋挞和切片小蛋糕…
+          {{packageData.packageDesc}}
 
         </view>
       </view>
@@ -43,91 +47,110 @@
   <view class="main {{isIpx?'isIpx':''}}">
     <view class='left'>
       <view class='tree'>
-        <view class='item active'>
-          500元A套餐
-        </view>
-        <view class='item'>
-          500元B套餐
-        </view>
+        <block wx:for="{{packageData.list}}" wx:for-index="idx" wx:key="key">
+          <view class='item {{treeActive==idx?"active":""}}' data-index="{{idx}}" bindtap='treeSelect'>
+            <view style='position: relative;display:inline-block;line-height: normal;'>{{item.name}}
+              <van-info info="2"></van-info>
+            </view>
+          </view>
+        </block>
+
 
       </view>
     </view>
     <view class='right'>
       <view class='content'>
-        <view class='right-title'>基本套品</view>
-        <view class='com-cell-group'>
+        <block wx:for="{{packageData.list[treeActive].children}}" wx:for-index="idx" wx:key="key">
+          <view class='right-title'>{{item.name}}</view>
+          <view class='com-cell-group'>
 
-          <view class='com-cell'>
-            <view class='com-cell-head'>
-              <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
-            </view>
-            <view class='com-cell-body'>
-              <view class='title'>
-                新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+            <block wx:for="{{item.children}}" wx:for-item="item2" wx:for-index="idx2" wx:key="key">
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+                  <image src='{{item2.cover}}'></image>
+                </view>
+                <view class='com-cell-body'>
+                  <view class='title'>
+                    {{item2.title}}
+                  </view>
+                  <view class='subtitle'>
+                    {{item2.subTitle}}
+                  </view>
+                  <view class='params'>
+                    <view class='price' wx:if="{{item2.price}}">¥{{item2.price}}</view>
+                    <view class='units' wx:if="{{item2.units}}">{{item2.units}}</view>
+                    <view class='amount' wx:if="{{item2.amount}}">{{item2.amount}}</view>
+                    <view class='spec-btn' data-index='{{idx}}' data-childrenindex='{{idx2}}' wx:if="{{item2.isSpec}}" bindtap='specBtn'>
+                      选规格
+                    </view>
+                    <view class='stepper' wx:if="{{item2.isStep}}">
+                      <view class='minus'>
+                        <image src='/static/images/detail/minus.png'></image>
+                      </view>
+                      <view class='num'>2</view>
+                      <view class='plus'>
+                        <image src='/static/images/detail/plus.png'></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
               </view>
-              <view class='subtitle'>
-                奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
-              </view>
-              <view class='params'>
-                <view class='units'>10英寸</view>
-                <view class='amount'>2个</view>
-              </view>
-            </view>
+            </block>
           </view>
 
-        </view>
+          <!-- <view class='right-title'>以下单品选满10份</view>
+          <view class='com-cell-group'>
 
-        <view class='right-title'>以下单品选满10份</view>
-        <view class='com-cell-group'>
-
-          <view class='com-cell'>
-            <view class='com-cell-head'>
-              <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
-            </view>
-            <view class='com-cell-body'>
-              <view class='title'>
-                新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+            <view class='com-cell'>
+              <view class='com-cell-head'>
+                <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
               </view>
-              <view class='subtitle'>
-                奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
-              </view>
-              <view class='params'>
-                <view class='price'>¥23</view>
-                <view class='stepper'>
-                  <view class='minus'>
-                    <image src='/static/images/detail/minus.png'></image>
-                  </view>
-                  <view class='num'>2</view>
-                  <view class='plus'>
-                    <image src='/static/images/detail/plus.png'></image>
+              <view class='com-cell-body'>
+                <view class='title'>
+                  新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+                </view>
+                <view class='subtitle'>
+                  奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
+                </view>
+                <view class='params'>
+                  <view class='price'>¥23</view>
+                  <view class='stepper'>
+                    <view class='minus'>
+                      <image src='/static/images/detail/minus.png'></image>
+                    </view>
+                    <view class='num'>2</view>
+                    <view class='plus'>
+                      <image src='/static/images/detail/plus.png'></image>
+                    </view>
                   </view>
                 </view>
               </view>
             </view>
-          </view>
 
 
-          <view class='com-cell'>
-            <view class='com-cell-head'>
-              <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
-            </view>
-            <view class='com-cell-body'>
-              <view class='title'>
-                新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+            <view class='com-cell'>
+              <view class='com-cell-head'>
+                <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
               </view>
-              <view class='subtitle'>
-                奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
-              </view>
-              <view class='params'>
-                <view class='price'>¥23</view>
+              <view class='com-cell-body'>
+                <view class='title'>
+                  新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+                </view>
+                <view class='subtitle'>
+                  奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
+                </view>
+                <view class='params'>
+                  <view class='price'>¥23</view>
 
-                <view class='spec-btn' bindtap='specBtn'>
-                  选规格
+                  <view class='spec-btn' bindtap='specBtn'>
+                    选规格
+                  </view>
                 </view>
               </view>
             </view>
-          </view>
-        </view>
+          </view> -->
+        </block>
+
       </view>
 
 
@@ -148,7 +171,7 @@
         </view>
         <view class='com-cell-body'>
           <view class='title'>
-            榛果风味拿铁（热/冷）
+            {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['title']}}
           </view>
         </view>
         <view class='com-cell-foot'>
@@ -161,30 +184,18 @@
 
         <view class='com-cell-body'>
           <view class='spec-list-group'>
-            <view class='spec-list'>
-              <view class='spec-list-head'>规格</view>
-              <view class='spec-list-body'>
-                <view class='spec-param active'>大</view>
-              </view>
-            </view>
+            <block wx:for="{{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['spec']}}" wx:key="key" wx:for-index="idx">
+              <view class='spec-list'>
+                <view class='spec-list-head'>{{item.name}}</view>
+                <view class='spec-list-body'>
+                  <block wx:for="{{item.params}}" wx:key="key2" wx:for-index="idx2" wx:for-item="item2">
+                    <view class='spec-param {{item2==paramActive[idx]||(idx2==item.defaultIndex&&!paramActive[idx])?"active":""}}' data-index="{{idx}}" data-item="{{item2}}" bindtap='paramSelect'>{{item2}}</view>
+                  </block>
 
-            <view class='spec-list'>
-              <view class='spec-list-head'>温度</view>
-              <view class='spec-list-body'>
-                <view class='spec-param active'>冰</view>
-                <view class='spec-param'>热</view>
+                </view>
               </view>
-            </view>
-            <view class='spec-list'>
-              <view class='spec-list-head'>糖度</view>
-              <view class='spec-list-body'>
-                <view class='spec-param active'>全糖(推荐)</view>
-                <view class='spec-param'>半糖</view>
-                <view class='spec-param'>半糖</view>
-                <view class='spec-param'>半糖</view>
-                <view class='spec-param'>半糖</view>
-              </view>
-            </view>
+            </block>
+
 
           </view>
         </view>
@@ -196,7 +207,7 @@
           商品详情
         </view>
         <view class='com-cell-body'>
-          萃取浓缩烘焙咖啡豆精华，每一口都馥郁满溢，伴随浓郁的焦糖香及多层次的口感，带你开启咖啡之旅
+          {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['desc']}}
         </view>
 
       </view>
@@ -205,12 +216,12 @@
 
         <view class='com-cell-body'>
           <view class='params'>
-            <view class='price'>¥23</view>
+            <view class='price'>¥ {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['price']}}</view>
             <view class='stepper'>
               <view class='minus'>
                 <image src='/static/images/detail/minus.png'></image>
               </view>
-              <view class='num'>2</view>
+              <view class='num'>1</view>
               <view class='plus'>
                 <image src='/static/images/detail/plus.png'></image>
               </view>
@@ -544,7 +555,7 @@
           <view class='com-cell-body'>
             <view>
               萃取浓缩烘焙咖啡豆精华，每一口都馥郁满溢，伴随浓郁的焦糖香及多层次的口感，带你开启咖啡之旅
-            
+
             </view>
 
           </view>
@@ -573,13 +584,13 @@
     </view>
     <view class='qr-foot'>
       <view class='qr-image'>
-        <image src='http://img2.y01.cn/images/266/2019/07/ynNdE5EZskqWpaCqsKfzC7fz7ZDUwS.png'></image>
+        <image bindtap='previewImage' data-url="http://img2.y01.cn/images/266/2019/07/Wi2ixQJjfGgOg8JjjuE400Q4U0Uuti.png" src='http://img2.y01.cn/images/266/2019/07/Wi2ixQJjfGgOg8JjjuE400Q4U0Uuti.png' show-menu-by-longpress="true"></image>
         <view>识别二维码咨询详情</view>
       </view>
     </view>
   </view>
   <view class='close'>
-   <van-icon name="close" bind:click="qrClose" size="44rpx" color="#DDDDDD" />
+    <van-icon name="close" bind:click="qrClose" size="44rpx" color="#DDDDDD" />
   </view>
 </van-popup>
 
@@ -588,8 +599,10 @@
 
 <van-submit-bar disabled="{{disabled}}" label=" " price="{{ 3050 }}" button-text="{{buttonText}}" button-type="primary" bind:submit="onClickButton" tip="{{ true }}" button-class="btn-submit" bar-class="bar-submit">
 
-
-  <van-icon name="bag-o" bind:click="cart" color="#34D176" custom-style="padding-left:40rpx;vertical-align:middle;" size="48rpx" info="9" />
+  <!-- <view class=''>合计</view> -->
+  <van-icon bind:click="cart" color="#34D176" custom-style="padding-left:40rpx;vertical-align:middle;" info="9">
+    <image src='/static/images/detail/cart.png' mode='widthFix' style='width:48rpx;'></image>
+  </van-icon>
 
   <!-- <van-tag type="primary">标签</van-tag>
   <view slot="tip">

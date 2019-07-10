@@ -1,0 +1,84 @@
+<view class="page withdraw-list-page">
+
+  <view class='withdraw-list'>
+
+    <view class='com-cell-group'>
+      <view class='com-cell withdraw-group-title'>
+        <view class='com-cell-head'>
+          <image src='/static/images/order/order.png'></image>
+
+        </view>
+        <view class='com-cell-body'>
+          <view class='com-ellipsis'>广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司</view>
+
+        </view>
+        <view class='com-cell-foot'>
+          <view class='price'>
+            +9
+          </view>
+        </view>
+      </view>
+      <view class='com-cell'>
+
+        <view class='com-cell-head'>
+          订单编号
+        </view>
+        <view class='com-cell-body'>
+          456788909867556
+        </view>
+      </view>
+      <view class='com-cell'>
+
+        <view class='com-cell-head'>
+          订单金额
+        </view>
+        <view class='com-cell-body'>
+          ¥2390.00
+        </view>
+      </view>
+
+    </view>
+    <view class='com-cell-group'>
+      <view class='com-cell withdraw-group-title'>
+        <view class='com-cell-head'>
+          <image src='/static/images/order/order.png'></image>
+
+        </view>
+        <view class='com-cell-body'>
+          <view class='com-ellipsis'>广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司广州广脉公司</view>
+
+        </view>
+        <view class='com-cell-foot'>
+          <view class='price'>
+            +9
+          </view>
+        </view>
+      </view>
+      <view class='com-cell'>
+
+        <view class='com-cell-head'>
+          订单编号
+        </view>
+        <view class='com-cell-body'>
+          456788909867556
+        </view>
+      </view>
+      <view class='com-cell'>
+
+        <view class='com-cell-head'>
+          订单金额
+        </view>
+        <view class='com-cell-body'>
+          ¥2390.00
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+
+
+
+
+</view>

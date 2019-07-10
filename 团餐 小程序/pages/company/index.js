@@ -1,11 +1,13 @@
 // pages/company/index.js
+var app = getApp();
+var core = app.requirejs("core");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    formdata: {}
   },
 
   /**
@@ -61,6 +63,58 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+
+  },
+  onChange(e) {
+    var formdata = Object.assign({}, this.data.formdata);
+    console.log(e.detail)
+    formdata[core.pdata(e).name] = e.detail;
+    this.setData({
+      formdata
+    })
+  },
+  submit() {
+
+    var formdata = this.data.formdata;
+
+
+    if (!formdata.code) {
+      wx.showToast({
+        title: '请输入公司代码',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    } else if (!formdata.name) {
+      wx.showToast({
+        title: '请输入您的姓名',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    } else if (!formdata.dept) {
+      wx.showToast({
+        title: '请输入您的所属部门',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    } else if (!formdata.title) {
+      wx.showToast({
+        title: '请输入您的职位',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    } else if (!formdata.tel) {
+      wx.showToast({
+        title: '请输入您的电话号码',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    }
+
 
   }
 })

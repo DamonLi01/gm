@@ -1,0 +1,225 @@
+/* pages/promotion/apply-for/index.wxss */
+
+.banner {
+  height: 237rpx;
+}
+
+.van-cell {
+  padding: 33rpx 28rpx !important;
+}
+
+.van-cell:after {
+  left: 20rpx !important;
+  right: 20rpx !important;
+}
+
+.van-cell .van-cell__title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666;
+}
+
+.van-hairline--bottom:after, .van-hairline--left:after,
+.van-hairline--right:after, .van-hairline--surround:after,
+.van-hairline--top-bottom:after, .van-hairline--top:after, .van-hairline:after {
+  display: none;
+}
+
+/* .van-cell .van-field__input{
+
+} */
+
+.uploads {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666;
+  padding: 33rpx 28rpx !important;
+  background: #fff;
+}
+
+.uploads .content {
+  display: flex;
+}
+
+.uploads .content .item {
+  width: 130rpx;
+  height: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px dashed #ccc;
+  margin-top: 14rpx;
+}
+
+.uploads .content .item +.item {
+  margin-left: 20rpx;
+}
+
+.uploads .content .item image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.uploads .content .item view {
+  font-size: 54rpx;
+  font-weight: 400;
+  color: rgba(221, 221, 221, 1);
+}
+
+.com-cell-group {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  /* margin-top: 20rpx; */
+}
+
+.com-cell-group+.com-cell-group {
+  margin-top: 20rpx;
+}
+
+.com-cell-group .com-cell {
+  padding: 20rpx;
+  position: relative;
+}
+
+.com-cell-group .com-cell::before {
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  top: auto;
+  left: 20rpx;
+  right: 20rpx;
+  bottom: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-bottom: 1px solid #eee;
+}
+
+.com-cell-group .com-cell .com-cell-head image {
+  width: 120rpx;
+  height: 90rpx;
+  margin-right: 10rpx;
+}
+
+.com-cell-group .com-cell .com-cell-body {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rpx 0;
+  overflow: hidden;
+}
+
+.com-cell-group .com-cell .com-cell-body .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.com-cell-group .com-cell .com-cell-body .item .title {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.com-cell-group .com-cell .com-cell-body .item .price {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.com-cell-group .com-cell .com-cell-body .item .params {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(154, 155, 166, 1);
+}
+
+.com-cell-group .com-cell .com-cell-body .item .amount {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(154, 155, 166, 1);
+}
+
+.com-cell-group .com-cell.order-group-title {
+  padding: 20rpx 12rpx;
+}
+
+.com-cell-group .com-cell.order-group-title .com-cell-head image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
+}
+
+.com-cell-group .com-cell.order-group-title .com-cell-body {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 40rpx;
+  flex-direction: row;
+}
+
+.com-cell-group .com-cell.order-group-title .com-cell-foot {
+  font-size: 22rpx;
+  font-weight: 400;
+  color: rgba(52, 209, 118, 1);
+}
+
+.com-cell-group .com-cell .com-cell-input {
+  flex: 1;
+  display: block;
+}
+
+.com-cell-group .com-cell.total-cell {
+  flex-direction: column;
+}
+
+.com-cell-group .com-cell.total-cell .com-cell-text {
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.com-cell-group .com-cell.total-cell .com-cell-text .price {
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+
+.com-cell-group .com-cell.total-cell .com-cell-btn {
+  justify-content: flex-end;
+  margin-top: 14rpx;
+}
+
+.com-cell-group .com-cell.total-cell .com-cell-btn view {
+  width: 170rpx;
+  line-height: 54rpx;
+  border-radius: 6rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  display: inline-block;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.com-cell-group .com-cell.total-cell .com-cell-btn view+view {
+  margin-left: 15rpx;
+}
+
+.tips {
+  background-color: #fff;
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.tips text {
+  color: #fb8836;
+}
+
+.price-input {
+  color: #fb8836 !important;
+}

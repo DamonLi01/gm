@@ -1,0 +1,70 @@
+<view class='page member-page'>
+
+  <view class='com-cell-group user-info-group'>
+
+    <view class='com-cell'>
+
+      <view class='com-cell-head'>
+        <image src='http://img2.y01.cn/images/266/2019/07/rqQCr0LeBh20cofjr0lJbJozJO0plQ.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        李洋
+      </view>
+    </view>
+  </view>
+
+
+  <view class='com-cell-group list-group'>
+    <view class='com-cell pad2520' data-url='/pages/promotion/apply-for/index' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/member/generalize.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        推广中心
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+    <view class='com-cell pad2520' data-url='/pages/member/address/index' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/member/address.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        地址管理
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+    <view class='com-cell pad2520' data-url='' bindtap='jump'>
+      <view class='com-cell-head'>
+        <image src='/static/images/member/contact.png'></image>
+      </view>
+      <view class='com-cell-body'>
+        <button class='contact' open-type="contact">联系客服</button>
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+<co-ipx />
+<co-tabbar />

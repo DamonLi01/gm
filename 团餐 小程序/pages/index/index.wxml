@@ -1,1 +1,615 @@
+<view class='page high-tea-page-detail'>
+
+  <view class='banner' wx:if="{{packageData.adv}}">
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:237rpx'>
+      <block wx:for="{{packageData.adv}}" wx:key="key">
+        <swiper-item>
+          <!-- <image src="{{item}}" bindload="imgHeight" class="slide-image" /> -->
+
+          <image src="{{item.imgUrl}}" data-jump="{{item.link}}" bindtap='jump' class="slide-image" />
+
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='com-cell-group info-group'>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+        <view class='title'>
+          {{packageData.packageName}}
+        </view>
+      </view>
+      <view class='com-cell-body '>
+        <image bindtap='call' data-tel="{{packageData.tel}}" src='/static/images/detail/call.png'></image>
+        <image bindtap='qrshow' src='/static/images/detail/qr.png'></image>
+
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+
+    <view class='com-cell'>
+
+      <view class='com-cell-body '>
+        <view class='desc'>
+          {{packageData.packageDesc}}
+
+        </view>
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="main {{isIpx?'isIpx':''}}">
+    <view class='left'>
+      <view class='tree'>
+        <block wx:for="{{packageData.list}}" wx:for-index="idx" wx:key="key">
+          <view class='item {{treeActive==idx?"active":""}}' data-index="{{idx}}" bindtap='treeSelect'>
+
+            <view style='position: relative;display:inline-block;line-height: normal;'>{{item.name}}
+              <van-info info="2"></van-info>
+            </view>
+
+          </view>
+        </block>
+
+
+      </view>
+    </view>
+    <view class='right'>
+      <view class='content'>
+        <block wx:for="{{packageData.list[treeActive].children}}" wx:for-index="idx" wx:key="key">
+          <view class='right-title'>{{item.name}}</view>
+          <view class='com-cell-group'>
+
+            <block wx:for="{{item.children}}" wx:for-item="item2" wx:for-index="idx2" wx:key="key">
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+                  <image src='{{item2.cover}}'></image>
+                </view>
+                <view class='com-cell-body'>
+                  <view class='title'>
+                    {{item2.title}}
+                  </view>
+                  <view class='subtitle'>
+                    {{item2.subTitle}}
+                  </view>
+                  <view class='params'>
+                    <view class='price' wx:if="{{item2.price}}">¥{{item2.price}}</view>
+                    <view class='units' wx:if="{{item2.units}}">{{item2.units}}</view>
+                    <view class='amount' wx:if="{{item2.amount}}">{{item2.amount}}</view>
+                    <view class='spec-btn' data-index='{{idx}}' data-childrenindex='{{idx2}}' wx:if="{{item2.isSpec}}" bindtap='specBtn'>
+                      选规格
+                    </view>
+                    <view class='stepper' wx:if="{{item2.isStep}}">
+                      <view class='minus'>
+                        <image src='/static/images/detail/minus.png'></image>
+                      </view>
+                      <view class='num'>2</view>
+                      <view class='plus'>
+                        <image src='/static/images/detail/plus.png'></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <!-- <view class='right-title'>以下单品选满10份</view>
+          <view class='com-cell-group'>
+
+            <view class='com-cell'>
+              <view class='com-cell-head'>
+                <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
+              </view>
+              <view class='com-cell-body'>
+                <view class='title'>
+                  新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+                </view>
+                <view class='subtitle'>
+                  奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
+                </view>
+                <view class='params'>
+                  <view class='price'>¥23</view>
+                  <view class='stepper'>
+                    <view class='minus'>
+                      <image src='/static/images/detail/minus.png'></image>
+                    </view>
+                    <view class='num'>2</view>
+                    <view class='plus'>
+                      <image src='/static/images/detail/plus.png'></image>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+
+            <view class='com-cell'>
+              <view class='com-cell-head'>
+                <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
+              </view>
+              <view class='com-cell-body'>
+                <view class='title'>
+                  新奥尔良烤肉披萨新奥尔良烤肉披萨新奥尔良烤肉披萨
+                </view>
+                <view class='subtitle'>
+                  奥尔良烤鸡肉/火腿/鲜肉肠/洋葱…洋葱…洋葱…洋葱…洋葱…
+                </view>
+                <view class='params'>
+                  <view class='price'>¥23</view>
+
+                  <view class='spec-btn' bindtap='specBtn'>
+                    选规格
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view> -->
+        </block>
+
+      </view>
+
+
+    </view>
+  </view>
+
+
+</view>
+
+<van-popup z-index="1010" show="{{ showPopup }}" position="bottom" overlay="{{ true }}" bind:close="onClose">
+
+  <view class='spec-popup'>
+    <view class='com-cell-group'>
+
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          <image src='http://img2.y01.cn/images/266/2019/07/DvwcVQWWnpnvDdp8q8dV7d74Dn4wvn.jpg'></image>
+        </view>
+        <view class='com-cell-body'>
+          <view class='title'>
+            {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['title']}}
+          </view>
+        </view>
+        <view class='com-cell-foot'>
+          <van-icon name="close" bind:click="onClose" size="44rpx" color="#DDDDDD" />
+        </view>
+      </view>
+
+
+      <view class='com-cell'>
+
+        <view class='com-cell-body'>
+          <view class='spec-list-group'>
+            <block wx:for="{{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['spec']}}" wx:key="key" wx:for-index="idx">
+              <view class='spec-list'>
+                <view class='spec-list-head'>{{item.name}}</view>
+                <view class='spec-list-body'>
+                  <block wx:for="{{item.params}}" wx:key="key2" wx:for-index="idx2" wx:for-item="item2">
+                    <view class='spec-param {{item2==paramActive[idx]||(idx2==item.defaultIndex&&!paramActive[idx])?"active":""}}' data-index="{{idx}}" data-item="{{item2}}" bindtap='paramSelect'>{{item2}}</view>
+                  </block>
+
+                </view>
+              </view>
+            </block>
+
+
+          </view>
+        </view>
+
+      </view>
+
+      <view class='com-cell good-info'>
+        <view class='com-cell-head'>
+          商品详情
+        </view>
+        <view class='com-cell-body'>
+          {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['desc']}}
+        </view>
+
+      </view>
+
+      <view class='com-cell shadow'>
+
+        <view class='com-cell-body'>
+          <view class='params'>
+            <view class='price'>¥ {{packageData.list[treeActive]['children'][itemIndex]['children'][itemChildrenIndex]['price']}}</view>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>1</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+</van-popup>
+
+
+
+<van-popup show="{{ cartShow }}" position="bottom" overlay="{{ true }}" bind:close="cartClose">
+  <view class='cart-popup'>
+    <view class='cart-head'>
+      <image src='/static/images/detail/delete.png'></image>
+      <view class='clean'>清空购物车</view>
+    </view>
+    <view class='cart-body'>
+      <view class='com-cell-group'>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            <view class='title'>
+
+              焦糖玛奇朵
+            </view>
+            <view class='desc'>
+              标准冰+少糖
+            </view>
+
+          </view>
+          <view class='com-cell-body'>
+            <view class='price'>
+              ¥28
+            </view>
+          </view>
+          <view class='com-cell-foot'>
+            <view class='stepper'>
+              <view class='minus'>
+                <image src='/static/images/detail/minus.png'></image>
+              </view>
+              <view class='num'>2</view>
+              <view class='plus'>
+                <image src='/static/images/detail/plus.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+
+      </view>
+
+    </view>
+  </view>
+  <view style='height:100px;'></view>
+</van-popup>
+
+
+
+
+
+
+
+
+
+<van-popup show="{{ qrShow }}" custom-class="qr-popup" z-index="101" overlay="{{ true }}" bind:close="qrClose">
+  <view class='qr'>
+    <view class='qr-head'>
+      <view class='title'>
+        马卡龙自选套餐
+      </view>
+    </view>
+    <view class='qr-body'>
+      <view class='com-cell-group'>
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            配送
+
+          </view>
+          <view class='com-cell-body'>
+            <view>起送¥500 | 配送费¥0 | 下午15:30分前送达</view>
+            <view>每日12:00前下单，超过12:00后不可下单</view>
+
+          </view>
+
+
+        </view>
+
+        <view class='com-cell'>
+          <view class='com-cell-head'>
+            套餐简介
+
+          </view>
+          <view class='com-cell-body'>
+            <view>
+              萃取浓缩烘焙咖啡豆精华，每一口都馥郁满溢，伴随浓郁的焦糖香及多层次的口感，带你开启咖啡之旅
+
+            </view>
+
+          </view>
+
+
+        </view>
+        <view class='com-cell call-item'>
+          <view class='com-cell-head'>
+            电话号码
+
+          </view>
+          <view class='com-cell-body'>
+
+            <image src='/static/images/detail/call.png'></image>
+            <view class='text'>
+              13743294723
+            </view>
+            <view bindtap='call' data-tel='13743294723' class='call-btn'>
+              一键拨打
+            </view>
+          </view>
+
+
+        </view>
+      </view>
+    </view>
+    <view class='qr-foot'>
+      <view class='qr-image'>
+        <image bindtap='previewImage' data-url="http://img2.y01.cn/images/266/2019/07/Wi2ixQJjfGgOg8JjjuE400Q4U0Uuti.png" src='http://img2.y01.cn/images/266/2019/07/Wi2ixQJjfGgOg8JjjuE400Q4U0Uuti.png' show-menu-by-longpress="true"></image>
+        <view>识别二维码咨询详情</view>
+      </view>
+    </view>
+  </view>
+  <view class='close'>
+    <van-icon name="close" bind:click="qrClose" size="44rpx" color="#DDDDDD" />
+  </view>
+</van-popup>
+
+
+
+
+<van-submit-bar disabled="{{disabled}}" safe-area-inset-bottom="{{false}}" label=" " price="{{ 3050 }}" button-text="{{buttonText}}" button-type="primary" bind:submit="submit" tip="{{ true }}" button-class="btn-submit" custom-class="custom-submit-bar {{isIpx?'isIpx':''}}"
+  bar-class="bar-submit">
+
+  <!-- <view class=''>合计</view> -->
+  <van-icon bind:click="cart" color="#34D176" custom-style="padding-left:40rpx;vertical-align:middle;" info="9">
+    <image src='/static/images/detail/cart.png' mode='widthFix' style='width:48rpx;'></image>
+  </van-icon>
+
+  <!-- <van-tag type="primary">标签</van-tag>
+  <view slot="tip">
+    您的收货地址不支持同城送, <text>修改地址</text>
+  </view> -->
+</van-submit-bar>
 <co-tabbar />

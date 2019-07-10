@@ -14,7 +14,9 @@
   color: rgba(255, 255, 255, 1);
   line-height: 90rpx;
 }
-
+.fixed-btn button::after{
+  display: none;
+}
 .fixed-btn.isIpx {
   padding-bottom: 34px;
 }
@@ -26,4 +28,11 @@
 .height.isIpx {
   height: 110rpx;
   padding-bottom: 34px;
+}
+
+.clearFixed.fixed-btn{
+  position: static;
+}
+.clearFixed.height{
+  display: none;
 }

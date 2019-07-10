@@ -41,7 +41,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -69,6 +69,103 @@
 					"name": "review",
 					"pathName": "pages/review/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/create/index",
+					"pathName": "pages/order/create/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/member/index",
+					"pathName": "pages/member/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/apply-for/index",
+					"pathName": "pages/promotion/apply-for/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index",
+					"pathName": "pages/order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/compensate/index",
+					"pathName": "pages/order/compensate/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加地址",
+					"pathName": "pages/member/address/create/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地址列表",
+					"pathName": "pages/member/address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/withdraw/index",
+					"pathName": "pages/promotion/withdraw/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/customer/index",
+					"pathName": "pages/promotion/customer/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/index",
+					"pathName": "pages/promotion/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/commission/index",
+					"pathName": "pages/promotion/commission/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promotion/withdraw/list/index",
+					"pathName": "pages/promotion/withdraw/list/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/detail/index",
+					"pathName": "pages/order/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
 					"scene": null
 				}
 			]

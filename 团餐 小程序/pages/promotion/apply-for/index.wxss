@@ -1,0 +1,67 @@
+/* pages/promotion/apply-for/index.wxss */
+
+.banner {
+  height: 237rpx;
+}
+
+.van-cell {
+  padding: 33rpx 28rpx !important;
+}
+
+.van-cell:after {
+  left: 0 !important;
+}
+
+.van-cell .van-cell__title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(11, 13, 44, 1);
+}
+
+.van-hairline--bottom:after, .van-hairline--left:after,
+.van-hairline--right:after, .van-hairline--surround:after,
+.van-hairline--top-bottom:after, .van-hairline--top:after, .van-hairline:after {
+  display: none;
+}
+
+/* .van-cell .van-field__input{
+
+} */
+
+.uploads {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(11, 13, 44, 1);
+  padding: 33rpx 28rpx !important;
+  background: #fff;
+}
+
+.uploads .content {
+  display: flex;
+}
+
+.uploads .content .item {
+  width: 290rpx;
+  height: 290rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px dashed #ccc;
+  margin-top: 14rpx;
+}
+
+.uploads .content .item +.item {
+  margin-left: 20rpx;
+}
+
+.uploads .content .item image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.uploads .content .item view {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(221, 221, 221, 1);
+}

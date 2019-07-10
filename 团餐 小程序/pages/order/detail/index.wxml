@@ -1,0 +1,220 @@
+<view class='page order-detail-page '>
+
+  <view class='status'>
+    <view class='title'>
+      待付款
+    </view>
+    <view class='subtitle'>
+      请在00:10:46内完成支付
+    </view>
+    <view class='btn-group'>
+      <view class='btn'>去付款</view>
+      <view class='btn green-btn'>确认收货</view>
+    </view>
+  </view>
+
+
+
+  <view class='com-cell-group'>
+    <view class='com-cell order-group-title'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='com-ellipsis'>抹茶甜点标准套餐抹茶甜点标准套餐抹茶甜点标准套餐</view>
+        </view>
+        <view class='item'>
+          <view class='amount'>
+            X2
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            1盒*6个
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            1盒*6个
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell total-cell '>
+
+      <view class='com-cell-item'>
+        <view class='label'>合计</view>
+        <view class='value'>¥489</view>
+      </view>
+      <view class='com-cell-item'>
+        <view class='label'>发票费用</view>
+        <view class='value'>¥489</view>
+      </view>
+      <view class='com-cell-item'>
+        <view class='label'>首款</view>
+        <view class='value'>¥489</view>
+      </view>
+      <view class='com-cell-item'>
+        <view class='label'>尾款</view>
+        <view class='value'>¥489</view>
+      </view>
+      <view class='com-cell-text'>
+
+        共38件商品 实付款
+        <text class='price'>¥359</text>
+      </view>
+    </view>
+
+  </view>
+  <button class='contact' open-type="contact">联系客服</button>
+
+  <view class='com-cell-group info-group'>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <view class='dot'></view>
+        <view>配送信息</view>
+
+      </view>
+
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='label'>
+            配送时间
+          </view>
+          <view class='value'>
+            7月4日 14:00
+          </view>
+        </view>
+        <view class='item'>
+          <view class='label'>
+            配送地址
+          </view>
+          <view class='value'>
+            熊娜 13627819234 广州市天河区珠吉路4号东泰商务厦4楼D6室
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='com-cell-group info-group'>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <view class='dot'></view>
+        <view>订单信息</view>
+
+      </view>
+
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='label'>
+            支付方式
+          </view>
+          <view class='value'>
+            首尾款支付
+          </view>
+        </view>
+        <view class='item'>
+          <view class='label'>
+            发票抬头
+          </view>
+          <view class='value'>
+            广州广脉科技有限公司
+          </view>
+        </view>
+        <view class='item'>
+          <view class='label'>
+            发票税号
+          </view>
+          <view class='value'>
+            86856456367456
+          </view>
+        </view>
+        <view class='item'>
+          <view class='label'>
+            订单编号
+          </view>
+          <view class='value'>
+            456788909867556
+          </view>
+        </view>
+        <view class='item'>
+          <view class='label'>
+            下单时间
+          </view>
+          <view class='value'>
+            2019-07-03 09:23:15
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<fixed-btn clearFixed="true">
+  <button disabled="{{disabled}}" class='submit-btn' bindtap='onClose'>生成图片</button>
+</fixed-btn>
+
+<van-popup show="{{ show }}" bind:close="onClose">
+  <image src='{{prurl}}' mode='widthFix'></image>
+  <view class='save-btn'>
+    <button bindtap='save'>保存</button>
+
+  </view>
+</van-popup>
+
+<canvas canvas-id="shareImg" style="width:600px;height:800px"></canvas>

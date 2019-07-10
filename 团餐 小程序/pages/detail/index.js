@@ -25,7 +25,12 @@ Page({
     duration: 1000,
     circular: true,
     swiperheight: 0,
-    isIpx: false
+    isIpx: false,
+    treeActive: 0,
+    paramActive: [],
+    itemIndex: 0,
+    itemChildrenIndex: 0,
+    packageData: {}
   },
 
   /**
@@ -40,7 +45,7 @@ Page({
         }) : '';
       }
     })
-
+    this.getData();
   },
 
   /**
@@ -110,13 +115,20 @@ Page({
     }
   },
   specBtn(e) {
+
+    var itemIndex = e.currentTarget.dataset.index,
+      itemChildrenIndex = e.currentTarget.dataset.childrenindex;
+    console.log(e.currentTarget.dataset)
     this.setData({
-      showPopup: true
+      showPopup: true,
+      itemIndex,
+      itemChildrenIndex
     })
   },
   cart(e) {
+    var cartShow = !this.data.cartShow;
     this.setData({
-      cartShow: true
+      cartShow
     });
   },
   call(e) {
@@ -136,6 +148,54 @@ Page({
   qrClose() {
     this.setData({
       qrShow: false
+    })
+  },
+  previewImage(e) {
+    console.log(e.currentTarget.dataset.url)
+    wx.previewImage({
+      current: e.currentTarget.dataset.url, // 当前显示图片的http链接
+      urls: [e.currentTarget.dataset.url] // 需要预览的图片http链接列表
+    })
+  },
+  jump(e) {
+
+    if (e.currentTarget.dataset.jump) {
+      wx.navigateTo({
+        url: e.currentTarget.dataset.jump,
+      })
+    }
+  },
+  getData() {
+    var that = this;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5d1eacd507a93211c8bc5c27/example/package',
+      success(res) {
+        var packageData = res.data.data;
+        console.log(packageData)
+        that.setData({
+          packageData
+        });
+        wx.setNavigationBarTitle({
+          title: packageData.packageName,
+        })
+      }
+    })
+  },
+  treeSelect(e) {
+    var treeActive = e.currentTarget.dataset.index;
+    this.setData({
+      treeActive
+    })
+  },
+  paramSelect(e) {
+    var itemIndex = e.currentTarget.dataset.index,
+      childrenItem = e.currentTarget.dataset.item;
+    var paramActive = this.data.paramActive;
+
+    paramActive[itemIndex] = childrenItem;
+    console.log(e.currentTarget.dataset)
+    this.setData({
+      paramActive
     })
   }
 })

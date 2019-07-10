@@ -1,5 +1,9 @@
 @import "/dist/common/index.wxss";
 
+image {
+  height: 0;
+}
+
 .page {
   background-color: #f6f7f9;
 }
@@ -32,9 +36,15 @@
 .com-text-right {
   text-align: right;
 }
-.com-text-left{
+
+.com-text-center {
+  text-align: center;
+}
+
+.com-text-left {
   text-align: left;
 }
+
 .com-block {
   display: block;
   width: 100%;
@@ -90,4 +100,28 @@
   margin-top: -6rpx;
   right: 4rpx;
   /* margin-right: 4rpx; */
+}
+
+.pad2520 {
+  padding: 25rpx 20rpx !important;
+}
+
+.com-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.com-ellipsis-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.green-btn {
+  background: linear-gradient(90deg, rgba(7, 215, 101, 1) 0%, rgba(52, 209, 118, 1) 100%);
+  border-radius: 6rpx !important;
+  color: rgba(255, 255, 255, 1) !important;
+  border-color: rgba(7, 215, 101, 1) !important;
 }

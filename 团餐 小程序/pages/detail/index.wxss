@@ -82,6 +82,7 @@ page {
   width: 220rpx;
   flex-shrink: 0;
   overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .main .left .tree .item {
@@ -115,6 +116,7 @@ page {
   background: #fff;
   flex: 1;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main .right .com-cell-head image {
@@ -511,14 +513,15 @@ page {
   border-radius: 10rpx;
   padding: 38rpx 30rpx;
   width: 90%;
-  /* position: relative; */
-  /* height:80%; */
+  /* position: relative; *//* height:80%; */
   overflow-y: visible !important;
 }
-.qr-popup .qr{
+
+.qr-popup .qr {
   /* max-height: 100%;
   overflow: auto; */
 }
+
 .qr-popup .qr-head .title {
   text-align: center;
   font-size: 34rpx;

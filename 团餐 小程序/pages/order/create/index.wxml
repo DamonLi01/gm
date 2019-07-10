@@ -1,0 +1,404 @@
+<view class='page order-create-page '>
+
+  <view class='com-cell-group address-group'>
+    <view class='com-cell  pad2520'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/address.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+        <view class='name'>熊娟 13445677888熊娟 13445677888熊娟 13445677888熊娟 13445677888</view>
+        <view class='add'>中国浙江省宁波市江北区市民路98号4楼D23号…</view>
+        <!-- <view class='choose-btn com-text-center'>
+          <view>请选择地址</view>
+        </view> -->
+      </view>
+      <view class='com-cell-foot com-cell-arrow'>
+
+      </view>
+    </view>
+  </view>
+
+
+  <view class='com-cell-group'>
+    <view class='com-cell order-group-title pad2520'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+        7月1号团餐菜单
+
+      </view>
+      <view class='com-cell-foot com-cell-arrow' bindtap='onClose'>
+        {{time}}
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='com-cell pad2520'>
+      <view class='com-cell-input'>
+        <van-cell-group>
+          <van-field value="{{ message }}" title-width="auto" label="备注： " type="textarea" placeholder="填写订单的备注留言～～～" autosize border="{{ false }}" />
+        </van-cell-group>
+      </view>
+    </view>
+    <view class='com-cell total-cell pad2520'>
+
+      <view class='com-cell-text'>
+
+        共17份 小计
+        <text class='price'>¥359</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='com-cell-group'>
+    <view class='com-cell order-group-title pad2520'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+        7月1号团餐菜单
+
+      </view>
+      <view class='com-cell-foot com-cell-arrow' bindtap='onClose'>
+        {{time}}
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+          <view class='price'>
+            ¥28
+          </view>
+        </view>
+        <view class='item'>
+          <view class='params'>
+            微辣
+          </view>
+          <view class='amount'>
+            X2
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='com-cell pad2520'>
+      <view class='com-cell-input'>
+        <van-cell-group>
+          <van-field value="{{ message }}" title-width="auto" label="备注： " type="textarea" placeholder="填写订单的备注留言～～～" autosize border="{{ false }}" />
+        </van-cell-group>
+      </view>
+    </view>
+    <view class='com-cell total-cell pad2520'>
+
+      <view class='com-cell-text'>
+
+        共17份 小计
+        <text class='price'>¥359</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class='com-cell-group receipt-group'>
+
+    <view class='com-cell pad2520'>
+      <view class='com-cell-head'>
+        需要发票
+        <text>比例6%</text>
+      </view>
+      <view class='com-cell-body'>
+
+      </view>
+      <view class='com-cell-foot'>
+        <van-checkbox value="{{ receiptType }}" checked-color="#34D176" bind:change="receiptType">
+        </van-checkbox>
+      </view>
+
+    </view>
+
+    <view wx:if="{{receiptType}}" class='com-cell-group receipt-content'>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          发票抬头：
+        </view>
+        <view class='com-cell-input'>
+          <van-cell-group>
+            <van-field value="{{ value }}" input-align="right" title-width="auto" placeholder="请输入抬头" border="{{ false }}" bind:change="" />
+          </van-cell-group>
+        </view>
+      </view>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          发票税号：
+        </view>
+        <view class='com-cell-input'>
+          <van-cell-group>
+            <van-field value="{{ value }}" input-align="right" title-width="auto" placeholder="请输入税号" border="{{ false }}" bind:change="" />
+          </van-cell-group>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='com-cell-group pay-group'>
+
+    <view class='com-cell pad2520'>
+      <view class='com-cell-head'>
+        全款支付
+      </view>
+      <view class='com-cell-body'>
+
+      </view>
+      <view class='com-cell-foot'>
+        <van-checkbox value="{{ !payType }}" checked-color="#34D176" bind:change="payType">
+        </van-checkbox>
+      </view>
+
+    </view>
+    <view class='com-cell pad2520'>
+      <view class='com-cell-head'>
+        首尾款支付
+      </view>
+      <view class='com-cell-body'>
+
+      </view>
+      <view class='com-cell-foot'>
+        <van-checkbox value="{{ payType }}" checked-color="#34D176" bind:change="payType">
+        </van-checkbox>
+      </view>
+
+    </view>
+
+    <view wx:if="{{payType}}" class='com-cell-group pay-content'>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          首款
+        </view>
+        <view class='com-cell-body'>
+        </view>
+        <view class='com-cell-foot'>
+          ¥166.25
+        </view>
+      </view>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          尾款
+        </view>
+        <view class='com-cell-body'>
+        </view>
+        <view class='com-cell-foot'>
+          ¥308.75
+        </view>
+      </view>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          发票费用
+        </view>
+        <view class='com-cell-body'>
+        </view>
+        <view class='com-cell-foot'>
+          ¥28.5
+        </view>
+      </view>
+      <view class='com-cell'>
+        <view class='com-cell-head'>
+          总计
+        </view>
+        <view class='com-cell-body'>
+        </view>
+        <view class='com-cell-foot'>
+          ¥503.5
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <button class='contact' open-type="contact">联系客服</button>
+
+  <view style='height:{{isIpx?"84":"50"}}px'></view>
+</view>
+<van-submit-bar disabled="{{disabled}}" button-text="提交" button-type="primary" bind:submit="onClickButton" tip="{{ true }}" button-class="btn-submit" bar-class="bar-submit">
+
+
+  <view class='ap'>
+    <!-- <view>
+      <text>合计 </text>
+      <text class='price'>¥166.25</text>
+    </view> -->
+    <view>
+      <text>首款应付 </text>
+      <text class='price'>¥166.25</text>
+    </view>
+
+    <view class='agreement'>
+      <van-checkbox value="{{ agreementType }}" checked-color="#34D176" bind:change="changeAgreement">我已阅读并同意
+        <text style='color:#34D176;'>《下单须知协议》</text>
+      </van-checkbox>
+    </view>
+  </view>
+
+
+
+</van-submit-bar>
+
+
+
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+
+
+  <van-datetime-picker type="datetime" value="{{ currentDate }}" bind:change="onChange" bind:confirm="onConfirm" bind:cancel="onCancel" min-date="{{ minDate }}" max-date="{{maxDate}}" formatter="{{ formatter }}" />
+
+</van-popup>

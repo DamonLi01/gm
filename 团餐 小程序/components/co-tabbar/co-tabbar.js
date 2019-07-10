@@ -15,30 +15,30 @@ Component({
     tabBarArr: [{
         text: '团餐',
         icon: '/static/images/tabbar/group-danner.png',
-        activeIcon: '/static/images/tabbar/group-danner.png',
-        info: '2',
+        activeIcon: '/static/images/tabbar/group-danner-active.png',
+        // info: '2',
         url: '/pages/index/index'
       },
       {
         text: '下午茶',
         icon: '/static/images/tabbar/high-tea.png',
-        activeIcon: '/static/images/tabbar/high-tea.png',
-        info: '2',
+        activeIcon: '/static/images/tabbar/high-tea-active.png',
+        // info: '2',
         url: '/pages/high-tea/index'
       },
       {
         text: '订单',
         icon: '/static/images/tabbar/order.png',
-        activeIcon: '/static/images/tabbar/order.png',
-        info: '2',
-        url: '/pages/logs/logs'
+        activeIcon: '/static/images/tabbar/order-active.png',
+        // info: '2',
+        url: '/pages/order/index'
       },
       {
         text: '个人中心',
         icon: '/static/images/tabbar/member.png',
-        activeIcon: '/static/images/tabbar/member.png',
-        info: '2',
-        url: '/pages/logs/logs'
+        activeIcon: '/static/images/tabbar/member-active.png',
+        // info: '2',
+        url: '/pages/member/index'
       }
     ],
     active: null,

@@ -4,11 +4,11 @@
     <van-cell-group>
 
 
-      <van-field value="" input-align="right" clearable label="公司代码" placeholder="请输入公司代码" />
-      <van-field value="" input-align="right" clearable label="姓名" placeholder="请输入您的姓名" />
-      <van-field value="" input-align="right" clearable label="部门" placeholder="请输入您的所属部门" />
-      <van-field value="" input-align="right" clearable label="职位" placeholder="请输入您的职位" />
-      <van-field value="" input-align="right" clearable label="电话号码" placeholder="请输入您的电话号码" />
+      <van-field  data-name="code" bind:change="onChange" input-align="right" clearable label="公司代码" placeholder="请输入公司代码" />
+      <van-field  data-name="name" bind:change="onChange" input-align="right" clearable label="姓名" placeholder="请输入您的姓名" />
+      <van-field  data-name="dept" bind:change="onChange" input-align="right" clearable label="部门" placeholder="请输入您的所属部门" />
+      <van-field  data-name="title" bind:change="onChange" input-align="right" clearable label="职位" placeholder="请输入您的职位" />
+      <van-field  data-name="tel" bind:change="onChange" input-align="right" type="number" clearable label="电话号码" placeholder="请输入您的电话号码" />
 
     </van-cell-group>
 
@@ -20,5 +20,5 @@
 
 
 <fixed-btn>
-  <button>提交信息</button>
+  <button bindtap='submit'>提交信息</button>
 </fixed-btn>

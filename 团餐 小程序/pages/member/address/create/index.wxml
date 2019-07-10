@@ -1,0 +1,54 @@
+<view class="page address-create-page">
+
+
+  <view class='address-create-form'>
+
+    <van-cell-group>
+
+
+      <van-field value="{{formdata.name}}" data-name="name" bind:change="onChange" clearable label="" placeholder="收货人" />
+      <van-field value="{{formdata.tel}}" data-name="tel" bind:change="onChange" type="number" clearable label="" placeholder="手机号" />
+      <view class='area ' bindtap='onArea' style='{{formdata.area?"color:#333;":""}}'>
+        <block wx:if="{{!formdata.area}}">
+
+          选择省/市/区
+
+        </block>
+        <block wx:if="{{formdata.area}}">
+
+          {{formdata.area}}
+
+        </block>
+      </view>
+      <van-field value="{{formdata.address}}" data-name="address" bind:change="onChange" clearable label="" placeholder="详细地址：如道路/门牌号/小区/单元室等" />
+
+      <view class='setDefault'>
+        <view class='label'>设置为默认地址</view>
+        <view class='content'>
+          <van-switch checked="{{ formdata.setDefault }}" bind:change="onSwitch" active-color="#34D176" inactive-color="#fff" size="46rpx" />
+
+        </view>
+      </view>
+    </van-cell-group>
+
+  </view>
+
+
+
+
+
+</view>
+
+<fixed-btn>
+  <button class='chooseAddress' bindtap='chooseAddress'>一键获取微信位置</button>
+  <button bindtap='submit'>保存</button>
+  <button class='delAddress' bindtap='delAddress'>删除</button>
+</fixed-btn>
+
+
+
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+
+  <van-area area-list="{{ areaList }}" bind:confirm="onConfirm" bind:cancel="onClose" />
+
+</van-popup>

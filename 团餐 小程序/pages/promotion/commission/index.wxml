@@ -1,0 +1,64 @@
+<view class="page promotion-commission-page">
+
+  <view class='com-cell-group'>
+
+
+    <view class='com-cell'>
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='title com-ellipsis'>佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现佣金提现</view>
+          <view class='review'>审核中</view>
+
+        </view>
+        <view class='item'>
+          2019-06-28
+        </view>
+      </view>
+      <view class='com-cell-foot'>
+
+        <view class='price'>
+          ¥198.00
+        </view>
+      </view>
+    </view>
+
+    <view class='com-cell'>
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='title com-ellipsis'>佣金提现</view>
+          <view class='review'>审核中</view>
+
+        </view>
+        <view class='item'>
+          2019-06-28
+        </view>
+      </view>
+      <view class='com-cell-foot'>
+
+        <view class='price'>
+          ¥198.00
+        </view>
+      </view>
+    </view>
+    <view class='com-cell'>
+      <view class='com-cell-body'>
+        <view class='item'>
+          <view class='title com-ellipsis'>佣金提现</view>
+          <view class='review'>审核中</view>
+
+        </view>
+        <view class='item'>
+          2019-06-28
+        </view>
+      </view>
+      <view class='com-cell-foot'>
+
+        <view class='price'>
+          ¥198.00
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

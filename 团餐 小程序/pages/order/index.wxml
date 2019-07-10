@@ -1,0 +1,1158 @@
+<view class='page order-index-page'>
+  <van-tabs active="{{ active.parent.index }}" data-name="parent" color="#999999" custom-class="custom-tabs" type="card" bind:change="activeChange">
+    <van-tab title="团餐订单">
+      <van-tabs active="{{ active.sub1.index }}" data-name="sub1" color="#999999" custom-class="custom-tabs sub-tabs" type="card" bind:change="activeChange">
+        <van-tab title="全部">
+
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url='/pages/order/detail/index'>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+
+
+
+        </van-tab>
+        <van-tab title="待确认">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="待配送">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="配送中">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="已完成">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+
+      </van-tabs>
+    </van-tab>
+    <van-tab title="下午茶订单">
+      <van-tabs active="{{ active.sub2.index }}" data-name="sub2" color="#999999" custom-class="custom-tabs sub-tabs" type="card" bind:change="activeChange">
+        <van-tab title="全部">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+                  <view class="green-btn" bindtap='jump' data-url=''>去付款</view>
+                  <view class='green-btn' bindtap='jump' data-url=''>确认收货 </view>
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="待确认">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url='/pages/order/compensate/index'>申请餐赔</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="待配送">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="配送中">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+        <van-tab title="已完成">
+          <view class='order-list'>
+
+            <view class='com-cell-group'>
+              <view class='com-cell order-group-title pad2520'>
+
+                <view class='com-cell-body'>
+                  订单号：201908021234231267
+
+                </view>
+                <view class='com-cell-foot'>
+                  待确认
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='com-cell'>
+                <view class='com-cell-head'>
+
+                  <image src='/static/images/order/order.png'></image>
+
+                </view>
+                <view class='com-cell-body'>
+
+                  <view class='item'>
+                    <view class='title'>
+                      土豆牛排饭
+                    </view>
+                    <view class='price'>
+                      ¥28
+                    </view>
+                  </view>
+                  <view class='item'>
+                    <view class='params'>
+                      微辣
+                    </view>
+                    <view class='amount'>
+                      X2
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view class='com-cell total-cell pad2520'>
+
+                <view class='com-cell-text'>
+
+                  共17份 小计
+                  <text class='price'>¥359</text>
+                </view>
+
+                <view class='com-cell-btn'>
+                  <view bindtap='jump' data-url=''>取消订单</view>
+
+                </view>
+              </view>
+
+            </view>
+
+
+
+          </view>
+        </van-tab>
+
+      </van-tabs>
+    </van-tab>
+
+  </van-tabs>
+
+
+
+</view>
+
+
+
+<co-ipx />
+<co-tabbar />

@@ -15,4 +15,5 @@
     src="{{ name }}"
     class="van-icon__image"
   />
+  <slot />
 </view>

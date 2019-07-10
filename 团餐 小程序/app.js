@@ -9,6 +9,7 @@ App({
     wx.getSystemInfo({
       success: function(t) {
         "0" == t.model.indexOf("iPhone X") ? e.setCache("isIpx", t.model) : e.setCache("isIpx", "");
+        "0" == t.model.indexOf("iPhone X") ? e.globalData.isIpx = true : '';
       }
     }), this.getConfig();
     // 不主动获取信息
@@ -137,6 +138,7 @@ App({
     api: "http://local.basic.com/app/ewei_shopv2_api.php?i=266",
     approot: "http://local.basic.com/addons/ewei_shopv2/",
     userInfo: "",
-    active:0
+    active: 0,
+    isIpx: false
   }
 });

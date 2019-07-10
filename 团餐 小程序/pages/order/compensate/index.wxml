@@ -1,0 +1,72 @@
+<view class="page order-compensate-page">
+
+
+  <view class='com-cell-group'>
+
+    <view class='com-cell'>
+      <view class='com-cell-head'>
+
+        <image src='/static/images/order/order.png'></image>
+
+      </view>
+      <view class='com-cell-body'>
+
+        <view class='item'>
+          <view class='title'>
+            土豆牛排饭
+          </view>
+
+        </view>
+        <view class='item'>
+
+          <view class='amount'>
+            X1
+          </view>
+          <view class='price'>
+            <text style='color:#FB8836;'>¥219</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view class='compensate-form'>
+
+    <van-cell-group>
+
+
+      <van-field title-width="100px" data-name="cause" bind:change="onChange" input-align="right" clearable label="餐赔原因" placeholder="请输入原因" />
+      <van-field title-width="100px" data-name="explain" bind:change="onChange" input-align="right" clearable label="餐赔说明" placeholder="选填" />
+      <van-field title-width="100px" input-class="price-input" data-name="amount" bind:change="onChange" input-align="right" clearable label="餐赔金额（元）" placeholder="请输入餐赔金额" />
+      <view class='tips'>
+        <text>*</text> 温馨提升：您可退款最大金额为
+        <text>999</text>元</view>
+      <view class='uploads'>
+        <view class='label'>上传凭证</view>
+        <view class='content'>
+          <view class='item' bindtap='chooseImg' data-name='proof'>
+            <block wx:if="{{!formdata.proof}}">
+              <view class='plus'>+</view>
+            </block>
+            <block wx:if="{{formdata.proof}}">
+              <image style='height:100%;width:100%;' src='{{formdata.proof}}'></image>
+            </block>
+          </view>
+
+        </view>
+      </view>
+    </van-cell-group>
+
+  </view>
+
+
+
+
+
+</view>
+
+<fixed-btn>
+  <button bindtap='submit'>提交申请</button>
+</fixed-btn>

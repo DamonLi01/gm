@@ -6,7 +6,20 @@
     "pages/high-tea/index",
     "pages/detail/index",
     "pages/company/index",
-    "pages/review/index"
+    "pages/review/index",
+    "pages/order/create/index",
+    "pages/member/index",
+    "pages/promotion/apply-for/index",
+    "pages/order/index",
+    "pages/order/compensate/index",
+    "pages/member/address/create/index",
+    "pages/member/address/index",
+    "pages/promotion/withdraw/index",
+    "pages/promotion/customer/index",
+    "pages/promotion/index",
+    "pages/promotion/withdraw/list/index",
+    "pages/promotion/commission/index",
+    "pages/order/detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -63,6 +76,7 @@
     "van-collapse": "/dist/collapse/index",
     "van-collapse-item": "/dist/collapse-item/index",
     "van-picker": "/dist/picker/index",
+    "van-info": "/dist/info/index",
     "co-tabbar": "/components/co-tabbar/co-tabbar",
     "co-ipx": "/components/co-ipx/co-ipx",
     "fixed-btn": "/components/fixed-btn/fixed-btn"

@@ -1,9 +1,11 @@
 <view class='page high-tea-page'>
   <view class='banner'>
-    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{swiperheight}}px'>
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{swiperheight}}rpx'>
       <block wx:for="{{imgUrls}}">
         <swiper-item>
-          <image src="{{item}}" bindload="imgHeight" class="slide-image" />
+          <image src="{{item}}" mode='widthFix' bindload="imgHeight" class="slide-image" />
+          <!-- <image src="{{item}}" class="slide-image" /> -->
+
         </swiper-item>
       </block>
     </swiper>
@@ -14,7 +16,7 @@
       标准套餐
     </view>
     <view class='content'>
-      <swiper style='height:{{setHeight}}rpx;' indicator-dots="true" indicator-color="#34D176" indicator-active-color="rgba(52,209,118,.2)">
+      <swiper style='height:590rpx;' indicator-dots="true" indicator-color="#34D176" indicator-active-color="rgba(52,209,118,.2)">
         <block wx:for="{{standard}}" wx:for-index="idx" wx:for-item="item" wx:key="key">
           <swiper-item class="slide-item">
             <block wx:if="{{idx==0}}">
